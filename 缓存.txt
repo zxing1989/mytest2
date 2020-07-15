@@ -1,0 +1,2 @@
+add 添加到缓存区   commit提交 本地仓库   checkout 从本地仓库检出   clone克隆 远程克隆到本地仓库    pull从远程仓库拉取到本地开发     push从本地仓库推送到远程仓库
+repository 仓库 本地版本库目录  （git第一分支master 主   （stage  index）暂存区    指针 HEAD
