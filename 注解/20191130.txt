@@ -1,0 +1,36 @@
+@ControllerAdvice  
+	@ControllerAdvice，是Spring3.2提供的新注解,它是一个Controller增强器,可对controller中被 @RequestMapping注解的方法加一些逻辑处理。最常用的就是异常处理
+			全局数据绑定    全局数据预处理
+  @ExceptionHandler(value = Exception.class)			异常处理注解一般和@ControllerAdvice 配合使用
+@RequestMapping	 单词理解 请求映射	注解 映射请求路径
+    @GetMapping  get请求方法处理  @postmapping
+@Autowired  @Autowired 是一个注释，它可以对类成员变量、方法及构造函数进行标注，让 spring 完成 bean 自动装配的工作。
+ @CrossOrigin  跨域支持访问资源共享     可以向@RequestMapping注解处理程序方法添加一个@CrossOrigin注解，
+
+  AnnotationMethodHandlerAdapter来开启支持@Controller 和 @RequestMapping注解的处理器。
+@Controller：用于标识是处理器类；
+@RequestMapping：请求到处理器功能方法的映射规则；
+@RequestParam：请求参数到处理器功能处理方法的方法参数上的绑定；
+@ModelAttribute：请求参数到命令对象的绑定；
+@SessionAttributes：用于声明session级别存储的属性，放置在处理器类上，通常列出
+模型属性（如@ModelAttribute）对应的名称，则这些属性会透明的保存到session中；
+@InitBinder：自定义数据绑定注册支持，用于将请求参数转换到命令对象属性的对应类型；
+
+Spring3.0引入RESTful架构风格支持(通过@PathVariable注解和一些其他特性支持),且又引入了
+更多的注解支持：
+@CookieValue：cookie数据到处理器功能处理方法的方法参数上的绑定；
+@RequestHeader：请求头（header）数据到处理器功能处理方法的方法参数上的绑定；
+@RequestBody：请求的body体的绑定（通过HttpMessageConverter进行类型转换）；
+@ResponseBody：处理器功能处理方法的返回值作为响应体（通过HttpMessageConverter进行类型转换）；
+@ResponseStatus：定义处理器功能处理方法/异常处理器返回的状态码和原因；
+@ExceptionHandler：注解式声明异常处理器；
+@PathVariable：请求URI中的模板变量部分到处理器功能处理方法的方法参数上的绑定，
+从而支持RESTful架构风格的URI；
+
+@restcontrolller  返回return内容而不是xml jsp页面  则Controller中的方法无法返回jsp页面，或者html 返回return里面的内容 
+
+
+
+Spring注解@Component、@Repository、@Service、@Controller区别
+所以，如果 Web 应用程序采用了经典的三层分层结构的话，最好在持久层、业务层和控制层分别采用 @Repository、@Service 和 @Controller 对分层中的类进行注释，
+而用 @Component 对那些比较中立的类进行注释。 

@@ -1,0 +1,5 @@
+@ControllerAdvice  
+	@ControllerAdvice，是Spring3.2提供的新注解,它是一个Controller增强器,可对controller中被 @RequestMapping注解的方法加一些逻辑处理。最常用的就是异常处理
+			全局数据绑定    全局数据预处理
+  @ExceptionHandler(value = Exception.class)			异常处理注解一般和@ControllerAdvice 配合使用
+		
